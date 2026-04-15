@@ -1,0 +1,91 @@
+import Image from "next/image";
+import React from "react";
+
+type Card = {
+  id: string;
+  title: string;
+  excerpt?: string;
+  image: string;
+  date?: string;
+};
+
+interface Props {
+  hero?: { image: string; title?: string; subtitle?: string };
+  cards?: Card[];
+}
+
+export default function ProvidingSection({
+  hero = { image: "/technology-team-meeting.jpg", title: "Blog official" },
+  cards = [],
+}: Props) {
+  // ensure there are at least 3 cards for layout demonstration
+  const displayed = cards.length >= 3 ? cards.slice(0, 3) : [
+    { id: "c1", title: "Stunning Design", excerpt: "Short description of the project and why it matters.", image: "/real-estate-property-hands.jpg", date: "Nov 12, 2024" },
+    { id: "c2", title: "Stunning Design", excerpt: "Short description of the project and why it matters.", image: "/construction-site-building.jpg", date: "Nov 12, 2024" },
+    { id: "c3", title: "Stunning Design", excerpt: "Short description of the project and why it matters.", image: "/technology-team-meeting.jpg", date: "Nov 12, 2024" },
+  ];
+
+  return (
+    <section className="py-12 md:py-20">
+      <div className="container mx-auto px-4 md:px-6">
+        <div className="grid gap-6 md:gap-8 md:grid-cols-3 items-start">
+          {/* Hero large image left (spans 2 columns on md and above) */}
+          <div className="md:col-span-2 w-full">
+            <div className="relative rounded-lg overflow-hidden shadow-lg">
+              <Image src={hero.image} alt={hero.title || "hero"} width={1200} height={700} className="w-full h-72 md:h-[420px] object-cover" />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent flex items-end">
+                <div className="p-6 md:p-10 text-white">
+                  <h2 className="text-2xl md:text-3xl font-bold">{hero.title}</h2>
+                  {hero.subtitle && <p className="mt-2 text-sm md:text-base opacity-90">{hero.subtitle}</p>}
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Right stacked cards */}
+          <div className="w-full flex flex-col gap-4">
+            {displayed.map((c) => (
+              <article key={c.id} className="flex gap-4 p-3 md:p-4 rounded-lg border hover:shadow-sm bg-white">
+                <div className="w-28 h-20 relative flex-shrink-0 rounded overflow-hidden">
+                  <Image src={c.image} alt={c.title} fill className="object-cover" sizes="112px" />
+                </div>
+                <div className="flex-1">
+                  <h3 className="text-sm md:text-base font-semibold text-gray-800">{c.title}</h3>
+                  <p className="text-xs md:text-sm text-gray-600 line-clamp-2 mt-1">{c.excerpt}</p>
+                  <div className="text-xs text-gray-400 mt-2">{c.date}</div>
+                </div>
+              </article>
+            ))}
+          </div>
+        </div>
+
+        {/* Below: supplemental info/map block */}
+        <div className="mt-8 bg-gradient-to-r from-white to-gray-50 rounded-lg p-6 md:p-8 shadow-sm flex flex-col md:flex-row items-center gap-6">
+          <div className="flex-1">
+            <h4 className="text-lg md:text-xl font-bold text-gray-800">At Certo, mobile security is not an afterthought</h4>
+            <p className="text-gray-600 mt-3 max-w-xl">With years of experience in mobile security and upscale detection, our products have helped countless people safeguard their devices and find peace of mind.</p>
+            <div className="mt-4 flex gap-6 text-sm text-gray-600">
+              <div>
+                <div className="text-2xl font-semibold">160</div>
+                <div className="text-xs">Markets</div>
+              </div>
+              <div>
+                <div className="text-2xl font-semibold">150</div>
+                <div className="text-xs">Countries</div>
+              </div>
+              <div>
+                <div className="text-2xl font-semibold">156</div>
+                <div className="text-xs">Currencies</div>
+              </div>
+            </div>
+          </div>
+
+          <div className="w-full md:w-96 h-48 rounded overflow-hidden shadow-inner">
+            {/* Map placeholder image */}
+            <Image src="/map-placeholder.png" alt="map" width={640} height={320} className="w-full h-full object-cover" />
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+}
