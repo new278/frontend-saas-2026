@@ -66,16 +66,16 @@ export default function ProvidingSection({
             <p className="text-gray-600 mt-3 max-w-xl">With years of experience in mobile security and upscale detection, our products have helped countless people safeguard their devices and find peace of mind.</p>
             <div className="mt-4 flex gap-6 text-sm text-gray-600">
               <div>
-                <div className="text-2xl font-semibold">160</div>
-                <div className="text-xs">Markets</div>
+                <div className="text-2xl font-semibold"></div>
+                <div className="text-xs"></div>
               </div>
               <div>
-                <div className="text-2xl font-semibold">150</div>
-                <div className="text-xs">Countries</div>
+                <div className="text-2xl font-semibold"></div>
+                <div className="text-xs"></div>
               </div>
               <div>
-                <div className="text-2xl font-semibold">156</div>
-                <div className="text-xs">Currencies</div>
+                <div className="text-2xl font-semibold"></div>
+                <div className="text-xs"></div>
               </div>
             </div>
           </div>

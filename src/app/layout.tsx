@@ -18,7 +18,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "System DB",
+  title: "Apansy",
   description: "Maritime Database and Management System",
 };
 

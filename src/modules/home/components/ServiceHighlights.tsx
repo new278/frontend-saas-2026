@@ -3,23 +3,23 @@ import ServiceCard from "./service-card"
 function ServiceHighlights() {
   const serviceDetails = [
     {
-      title: "Technology",
+      title: "Digital Innovation",
       description:
-        "With years of experience in mobile security and upscale detection, our products have helped manufacturers offer a complete range of technology services to help make-marking websites run smoothly.",
+        "We deliver innovative digital solutions that empower businesses to grow, compete, and succeed in an increasingly connected world. Our services include modern website development, custom software applications, and intelligent AI-powered tools designed to simplify everyday operations. We help organizations improve productivity, automate business processes, and create smarter digital experiences for their customers. Our technology solutions are built with a focus on quality, security, scalability, and long-term business growth. By combining creativity, innovation, and advanced technology, we help businesses transform their ideas into meaningful digital opportunities..",
       image: "/technology-team-meeting.jpg",
       link: "Read More...",
     },
     {
-      title: "Construction",
+      title: "Infrastructure Solutions",
       description:
-        "We help construction companies build a strong online presence and reach more clients. Our services include creating professional websites that highlight your projects, services, and achievements. We also handle the entire architecture.",
+        "We connect customers with reliable construction, engineering, and infrastructure service providers to support projects of different sizes. Our platform helps customers explore residential construction, commercial developments, architectural planning, and engineering solutions. We make it easier to discover qualified professionals, coordinate project requirements, and manage essential project information. By improving communication, transparency, and service coordination, we aim to create a smoother experience for customers and businesses. Our goal is to support quality construction, sustainable development, and long-term value through trusted professional connections.",
       image: "/construction-site-building.jpg",
       link: "Read More...",
     },
     {
-      title: "Real Estate",
+      title: "Property & Living",
       description:
-        "We offer specialized real estate marketing services designed to help property businesses connect with buyers, sellers, and investors more effectively. Our team creates custom solutions, user-friendly websites that let you connect with property owners.",
+        "We help customers explore property opportunities and connect with property owners, buyers, sellers, and real estate service providers. Our platform supports the discovery of residential and commercial properties, rental opportunities, and property-related professional services. We make it easier to find relevant options, communicate with service providers, and manage property inquiries in one convenient place. With a focus on transparency, accessibility, and reliable connections, we aim to simplify the property discovery process. Our goal is to make real estate services more convenient and accessible for individuals, families, investors, and businesses.",
       image: "/real-estate-property-hands.jpg",
       link: "Read More...",
     },

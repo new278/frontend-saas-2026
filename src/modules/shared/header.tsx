@@ -40,7 +40,7 @@ export default function Header() {
             {/* Logo */}
             <div className="flex items-center gap-2 font-bold text-xl text-blue-600">
               <NavLink href="/" exact className="flex items-center gap-2">
-               <Image src="/newLogo.png" alt="Logo" width={60} height={40} />
+               <Image src="/newLogo.png" alt="Logo" width={180} height={160} />
               </NavLink>
             </div>
 
